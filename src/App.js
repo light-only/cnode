@@ -1,24 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {Button, Layout} from 'antd';
+import {routers} from './router/index'
+import { useSelector} from "react-redux";
+import {Routes,Route,Navigate} from 'react-router-dom'
+import Header from "./component/Header";
+import Footer from './component/Footer';
+import './static/css/index.less';
+const {Content} = Layout;
 function App() {
+    // console.log(useSelector(state=>state));
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className='wrap'>
+            <Layout className='page'>
+                <Header>
+                </Header>
+                <Content>
+                    <Routes>
+                        {
+                            routers.map((item,index)=>{return <Route path={item.path} element={item.element} key={index}/>})
+                        }
+                    </Routes>
+                </Content>
+                <Footer>
+                </Footer>
+            </Layout>
+      </div>
   );
 }
 

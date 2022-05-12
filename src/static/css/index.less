@@ -1,0 +1,79 @@
+@import '~antd/dist/antd.less';
+.wrap{
+  margin: 0 5px;
+}
+#footer{
+  padding: 24px 0;
+}
+#header{
+  padding: 0;
+}
+.logo{
+  text-align: center;
+}
+.topics_list{
+  background-color: #fff;
+  padding: 0 5px;
+}
+html,body,#root,#root .page{
+  min-height: 100vh;
+}
+.index_nav{
+  margin-top: 10px;
+}
+.topic_tag{
+  margin: 0 5px;
+}
+.topic_date{
+  text-align: right;
+}
+.index_pagination{
+  border-top:1px solid #f0f0f0 ;
+  padding: 10px 5px;
+  background-color: #fff;
+  display: flex;
+}
+.index_pagination>ul{
+  margin: auto;
+}
+//宽度 >=576px
+@media all and (min-width: 576px){
+  .wrap{
+    margin: 0 10px;
+  }
+}
+//宽度 >=768px
+@media all and (min-width: 768px){
+  .wrap{
+    margin: 0 15px;
+    .topics_list{
+      padding: 0 10px;
+    }
+  }
+}
+//宽度 >=992px
+@media all and (min-width: 992px){
+  .wrap{
+    margin: 0 20px;
+    .topics_list{
+      padding: 0 20px;
+    }
+  }
+}
+//宽度 >=1200px
+@media all and (min-width: 1200px){
+  .wrap{
+    margin: 0 auto;
+    width: 980px;
+    .topics_list{
+      padding: 0 20px;
+    }
+  }
+}
+//宽度 >=1600px
+@media all and (min-width: 1200px){
+  .wrap{
+    margin: 0 auto;
+    width: 1200px;
+  }
+}
