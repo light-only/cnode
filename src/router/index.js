@@ -18,7 +18,7 @@ const routers = [
         element: <About/>
     },
     {
-        path:'/user/username',
+        path:'/user/:loginname',
         txt:'用户中心',
         element:<User/>
     },
